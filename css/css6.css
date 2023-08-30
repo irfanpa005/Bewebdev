@@ -1,0 +1,17 @@
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.l-square{
+    background-color:orange;
+    width:300px;
+    height: 300px;
+}
+
+.s-square{
+    background-color: rgb(5, 3, 0);
+    width:100px;
+    height: 100px;
+}
