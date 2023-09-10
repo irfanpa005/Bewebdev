@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin: 0; padding: 0;}
+ 
+ #container {
+     width: 1000px;
+     overflow: hidden;
+     margin: 50px auto;
+     background: white;
+ }
+ 
+ /*header*/
+ header {
+     width: 800px;
+     margin: 40px auto;
+ }
+  
+ header h1 {
+     text-align: center;
+     font: 100 60px/1.5 Helvetica, Verdana, sans-serif;
+     
+ }
+  
+ header p {
+     font: 100 15px/1.5 Helvetica, Verdana, sans-serif;
+     text-align: justify;
+ }
+  
+ /*photobanner*/
+  
+ .photobanner {
+     height: 233px;
+     width: 3550px;
+     margin-bottom: 80px;
+ }
+ 
+ img {
+   display: inline-block;
+ }
+ 
+ 
+ /*keyframe animations*/
+ .first {
+             animation: bannermove 10s linear infinite;
+ }
+  
+ @keyframes bannermove {
+  0% {
+     margin-left: 0px;
+  }
+  100% {
+     margin-left: -2125px;
+  }
+  
+ }
+  
+    </style>
+</head>
+<body>
+    <!-- Code taken from https://designshack.net/articles/css/infinitephotobanner/ -->
+<div id="container">
+    <header>
+	    <h1>Animated Photo Banner</h1>
+	    <p>Lorem ipsum dolor...</p>
+    </header>
+    
+    <!-- Each image is 350px by 233px -->
+    <div class="photobanner">
+    	<img class="first" src="https://picsum.photos/350/233/?image=1" alt="" />
+    	<img src="https://picsum.photos/350/233/?image=2" alt="" />
+    	<img src="https://picsum.photos/350/233/?image=3" alt="" />
+    	<img src="https://picsum.photos/350/233/?image=4" alt="" />
+    	<img src="https://picsum.photos/350/233/?image=5" alt="" />
+    	<img src="https://picsum.photos/350/233/?image=6" alt="" />
+    	<img src="https://picsum.photos/350/233/?image=1" alt="" />
+    	<img src="https://picsum.photos/350/233/?image=2" alt="" />
+    	<img src="https://picsum.photos/350/233/?image=3" alt="" />
+    	<img src="https://picsum.photos/350/233/?image=4" alt="" />
+    </div>
+</div>
+</body>
+</html>
