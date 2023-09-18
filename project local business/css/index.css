@@ -1,8 +1,40 @@
-body {
-    overflow-x: hidden; /* Hide horizontal scrollbar */
+*{
+    padding: 0;
+    margin: 0;
 }
 
+html,
+body{
+  width:100%;
+  overflow-x:hidden;
+}
 
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 6;
+}
+
+main{
+    margin-top: 50px;
+}
+
+.nav-title{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    left: 0;
+
+}
+
+.nav-title a {
+    margin-right: 0;
+    font-size: clamp(1rem,2rem,2.5rem);
+    font-family: 'Teko', sans-serif;
+    color: #e5f2b1;
+    
+}
 
 .nav-bg{
     background-color: #598392;
@@ -30,9 +62,24 @@ p{
     text-align: justify;
 }
 
+.title{
+    font-size: clamp(0.5rem,1.2rem,1.3rem);
+}
 
 
+.storephoto{
+    width: 100%;
+    height: 100%;
+    max-height: 600px;    
+}
 
+.section-titles{
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    background-color: #cadce2;
+    color: #770808;
+
+ }
 
 .logocontainer{
     overflow: hidden;
@@ -40,34 +87,40 @@ p{
     white-space: nowrap;
     background-color: #598392;
     position: relative;
+    width: 100%;
 }
 
 
 .logobanner1 {
 	height: auto;
-	width: 4200px;
+	width: fit-content;
     flex-wrap: nowrap;
     overflow: hidden;
-    animation: bannermove1 30s linear infinite;
+    animation: bannermove1 15s linear infinite;
 
     
 }
 
-.logobanner1 >img{
+.logobanner2{
+    height: auto;
+    width:fit-content; /* Adjust the width as needed */
+    flex-wrap: nowrap;
+    overflow: hidden;
+    margin-right: 0;
+    animation: bannermove2 15s linear infinite;
+}
+ 
+
+.logobanner1 >img , .logobanner2 > img{
     margin: 1vw 3vw;
-    width: 12vw ;
-    height: 12vw ;
+    width: clamp(90px,12vw,12vw);
+    height: clamp(90px,12vw,12vw);
     display: inline-block;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     
 }
 
 
-/*keyframe animations*/
-/* .first1 {  
-    
-}
-  */
 @keyframes bannermove1 {
 0% {
     transform: translateX(0);
@@ -78,27 +131,8 @@ p{
  
 }
 
-.logobanner2{
-    height: auto;
-    width:4150px; /* Adjust the width as needed */
-    flex-wrap: nowrap;
-    overflow: hidden;
-    margin-right: 0;
-    animation: bannermove2 30s linear infinite;
-    transform: translateX(-4%);
-}
- 
-.logobanner2 > img{
-    margin: 1vw 3vw;
-    width: 12vw;
-    height: 12vw;
-    display: inline-block;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-}
 
-/* .first2 {  
-    animation: bannermove2 15s linear infinite;
-} */
+
  
 @keyframes bannermove2 {
     0% {
@@ -138,5 +172,97 @@ p{
 
  .product-list li {
     text-align: left;
-    margin-left: 1.5em; /* Adjust this margin as needed */
+    margin-left: 1.5em;
+ }
+
+ .table{
+    width: 50%;
+ }
+
+ .address{
+    width: fit-content;
+
+ }
+
+ .address h4{
+    display: block;
+    margin: 0 auto;
+    text-align: left; 
+  }
+ 
+
+ .address p{
+    display: block;
+    margin: 0 auto; 
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+ }
+
+
+.g-map iframe{
+    width: 100%;
+}
+
+
+
+ .whatsapp-btn-container .whatsapp-btn {
+    font-size: 72px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    line-height: 3rem;
+    background-color: white;
+    --fa-animation-duration: 3s;
+
+ }
+
+
+ @media screen and (max-width:768px) {
+
+    .product-list{
+        align-items: start;
+        margin-left: 10px;
+        margin-top: 10px;
+      }
+
+      .product-list ul{
+        padding: 0;
+        margin: 0;
+      }
+
+      .table{
+        width: 90%;
+      }
+    
+
+ }
+
+ @media screen and (max-width:620px) {
+
+    .nav-title {
+        width: 80%;
+    }
+
+    .nav-title a{
+        font-size: clamp(1rem,1.4rem,2rem);
+    }
+
+    .address h3{
+        font-size: 1.3rem;
+    }
+
+    .address p{
+        font-size: 1rem;
+    }
+
+     .whatsapp-btn-container .whatsapp-btn {
+        font-size: 60px;
+        right: 10px;
+        bottom: 30px;
+        line-height: 2.4rem;
+  
+     }
+     
+
  }
